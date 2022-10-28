@@ -1,0 +1,36 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int num = 0 , x , y , z;
+
+    cout<<"Enter the size of array: ";
+    cin>>num;
+    
+    int array[num];
+    cout<<"Enter the values of the array: ";
+    for(x = 0 ; x < num ; x++)
+    {
+        cin>>array[x];
+    }
+    
+    int target = 0;
+    cout<<"Enter the target value: ";
+    cin>>target;
+    
+    for(y = 0 ; y < num ; y++)
+    {
+        for(z = y+1 ; z < num ; z++)
+        {
+            if(array[y] + array[z] == target)
+            {
+                cout<<"["<<y<<", "<<z<<"]"<<endl;
+                break;
+            }
+        }
+    }
+
+    return 0;
+}
